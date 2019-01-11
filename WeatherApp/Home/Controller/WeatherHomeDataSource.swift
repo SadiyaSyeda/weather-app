@@ -9,8 +9,7 @@
 import UIKit
 
 class WeatherHomeDataSource: NSObject {
-
-    var weatherHomeVC: WeatherHomeController
+    private var weatherHomeVC: WeatherHomeController
     init(weatherHomeVC: WeatherHomeController){
         self.weatherHomeVC = weatherHomeVC
     }
