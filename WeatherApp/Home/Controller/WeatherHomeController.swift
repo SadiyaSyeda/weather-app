@@ -10,8 +10,8 @@ import UIKit
 
 class WeatherHomeController: UIViewController {
 
-    @IBOutlet weak var weatherHomeTableView: UITableView!
-    var weatherHomeDataSource: WeatherHomeDataSource?
+    @IBOutlet private weak var weatherHomeTableView: UITableView!
+    private var weatherHomeDataSource: WeatherHomeDataSource?
     
     var weatherViewModel : WeatherViewModel? {
         didSet {
@@ -26,7 +26,7 @@ class WeatherHomeController: UIViewController {
         getWeather()
     }
     
-    func getWeather() {
+  private func getWeather() {
         HomeWeatherService.sharedInstanceHomeService.getWeatherData {[weak self] (weather) in
             guard let this = self else {return}
             this.weatherViewModel = WeatherViewModel(model: weather)
