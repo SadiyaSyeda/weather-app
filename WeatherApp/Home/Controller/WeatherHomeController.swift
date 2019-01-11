@@ -37,7 +37,6 @@ private extension WeatherHomeController {
     func setupView() {
         weatherHomeDataSource = WeatherHomeDataSource(weatherHomeVC: self)
         weatherHomeTableView.dataSource = weatherHomeDataSource
-//        weatherHomeTableView?.register(CurrentCityCell.self, forCellReuseIdentifier: CurrentCityCell.reuseIdentifier())
         
         let nibName = UINib(nibName: "CurrentCityCell", bundle: nil)
         weatherHomeTableView.register(nibName, forCellReuseIdentifier: "currentCityCell")

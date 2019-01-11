@@ -9,12 +9,11 @@
 import UIKit
 
 class HomeWeatherService {
-    
     static let sharedInstanceHomeService = HomeWeatherService()
     let url = "https://samples.openweathermap.org/data/2.5/forecast?zip=94040&appid=b6907d289e10d714a6e88b30761fae22"
-     var model : WeatherModel?
+    private var model : WeatherModel?
     
-    func getWeatherData(completion: @escaping(WeatherModel?) -> Void){
+    func getWeatherData(completion: @escaping(WeatherModel?) -> Void) {
         guard let url = URL(string: url) else {return}
         request(url: url, completion: completion)
         }
