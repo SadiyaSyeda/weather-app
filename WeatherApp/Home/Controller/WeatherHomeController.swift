@@ -10,8 +10,8 @@ import UIKit
 
 class WeatherHomeController: UIViewController {
 
-    @IBOutlet weak var weatherHomeTableView: UITableView!
-    var weatherHomeDataSource: WeatherHomeDataSource?
+    @IBOutlet private weak var weatherHomeTableView: UITableView!
+    private var weatherHomeDataSource: WeatherHomeDataSource?
     
     var weatherViewModel : WeatherViewModel? {
         didSet {
